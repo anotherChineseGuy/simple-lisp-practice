@@ -18,9 +18,14 @@
 
 ;problem 3
 (defun my_append (x y)
-    (append x y)
+    (cond
+        ((and (null x)(null y))())
+        ((not (null x))(cons(car x)(my_append (cdr x)y)))
+        ((not (null y))(cons(car y)(my_append x(cdr y))))
+    )
 )
 
+(print (my_append  '((a) (b) (c)) '((d) (e) (f))))   
 
 ;problem 4
 (defun my_attach (x y)
