@@ -72,6 +72,8 @@
 
 
 ;problem 8
+;inner check if there if any more x in y
+;update check to np accordingly 
 (defun inner1 (x y)
         (cond
             ((null (car y))())
